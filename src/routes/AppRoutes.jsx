@@ -8,17 +8,24 @@ import RoleBasedRoute from "./RoleBasedRoute";
 // pages
 import Home from "../pages/landing/Home";
 import CourseContent from "../pages/landing/CourseContent";
+import Courses from "../pages/landing/AllCourse";
+import ContactPage from "../pages/contact/Contact";
+import Login from "../pages/login/Login";
+import Register from "../pages/signup/Signup";
 
 export default function AppRoutes() {
     return (
         <Routes>
             {/* public routes */}
-            {/* <Route path="/login" element={<LoginPage />} /> */}
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/auth/sign-up" element={<Register />} />
 
             {/* non-protected example */}
             <Route path="/" element={<Home />} />
             {/* Course detail page */}
+            <Route path="/all-courses" element={<Courses />} />
             <Route path="/course" element={<CourseContent />} />
+            <Route path="contact-us" element={<ContactPage />} />
 
             {/* protected routes */}
             <Route
