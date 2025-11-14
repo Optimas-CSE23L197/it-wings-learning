@@ -13,6 +13,8 @@ import ContactPage from "../pages/contact/Contact";
 import Login from "../pages/login/Login";
 import Register from "../pages/signup/Signup";
 
+import AllArticles from "../pages/contact/AllArticles";
+
 export default function AppRoutes() {
     return (
         <Routes>
@@ -26,6 +28,10 @@ export default function AppRoutes() {
             <Route path="/all-courses" element={<Courses />} />
             <Route path="/course" element={<CourseContent />} />
             <Route path="contact-us" element={<ContactPage />} />
+
+
+            <Route path="/all-articles" element={<AllArticles />} />
+
 
             {/* protected routes */}
             <Route
