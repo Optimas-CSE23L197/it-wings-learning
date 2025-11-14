@@ -7,6 +7,7 @@ import RoleBasedRoute from "./RoleBasedRoute";
 
 // pages
 import Home from "../pages/landing/Home";
+import CourseContent from "../pages/landing/CourseContent";
 
 export default function AppRoutes() {
     return (
@@ -16,6 +17,8 @@ export default function AppRoutes() {
 
             {/* non-protected example */}
             <Route path="/" element={<Home />} />
+            {/* Course detail page */}
+            <Route path="/course" element={<CourseContent />} />
 
             {/* protected routes */}
             <Route

@@ -1,6 +1,6 @@
 import React from "react";
 import { GraduationCap } from "lucide-react";
-import BgImage from "../../assets/images/home/banner-3.png"
+import BgImage from "../../../assets/images/home/banner-3.png"
 
 function CTASection() {
     return (

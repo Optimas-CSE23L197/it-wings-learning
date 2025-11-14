@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureCard from "../common/FeatureCard";
+import FeatureCard from "../../common/FeatureCard";
 
 function FeaturesSection() {
     const stats = [

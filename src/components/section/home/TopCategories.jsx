@@ -1,6 +1,6 @@
 import React from "react";
-import CategoryCard from "../common/CategoryCard";
-import BtnOrange from "../common/BtnDarkBlue";
+import CategoryCard from "../../common/CategoryCard";
+import BtnOrange from "../../common/BtnDarkBlue";
 
 function TopCategories() {
     const categories = [

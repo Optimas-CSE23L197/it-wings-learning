@@ -1,9 +1,9 @@
 import React from "react";
-import SwiperWrapper from "../common/SwiperWrapper";
-import BtnOrange from "../common/BtnDarkBlue";
+import SwiperWrapper from "../../common/SwiperWrapper";
+import BtnOrange from "../../common/BtnDarkBlue";
 
 // import your current banner image
-import Banner from "../../assets/images/home/banner-2.jpg";
+import Banner from "../../../assets/images/home/banner-2.jpg";
 
 function HomeBanner() {
     const banners = [

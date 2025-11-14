@@ -1,6 +1,6 @@
 import React from "react";
-import SwiperWrapper from "../common/SwiperWrapper";
-import StudentFeedbackCard from "../common/StudentFeedback";
+import SwiperWrapper from "../../common/SwiperWrapper";
+import StudentFeedbackCard from "../../common/StudentFeedback";
 
 function StudentFeedbackSection() {
     const feedbacks = [

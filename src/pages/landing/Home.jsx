@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../../components/common/Navbar'
 import Footer from '../../components/common/Footer'
-import TopCategories from '../../components/section/TopCategories'
-import FeaturedCourses from '../../components/section/FeatureCourse'
-import FeaturesSection from '../../components/section/FeatureSection'
-import StudentFeedbackSection from '../../components/section/StudentFeedback'
-import CTASection from '../../components/section/CTASection'
-import HomeBanner from '../../components/section/Banner'
+import TopCategories from '../../components/section/home/TopCategories'
+import FeaturedCourses from '../../components/section/home/FeatureCourse'
+import FeaturesSection from '../../components/section/home/FeatureSection'
+import StudentFeedbackSection from '../../components/section/home/StudentFeedback'
+import CTASection from '../../components/section/home/CTASection'
+import HomeBanner from '../../components/section/home/Banner'
 
 function Home() {
     return (

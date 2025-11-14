@@ -1,6 +1,6 @@
 import React from "react";
-import CourseCardHorizontal from "../common/CourseCard";
-import BtnOrange from "../common/BtnDarkBlue";
+import CourseCardHorizontal from "../../common/CourseCard";
+import BtnOrange from "../../common/BtnDarkBlue";
 
 function FeaturedCourses() {
 
