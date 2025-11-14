@@ -1,14 +1,8 @@
 import React from "react";
 
-const  nButton extends Component {
-  render() {
-    const { text, onClick } = this.props;
-
-    return (
-      <button
-        onClick={onClick}
-        className="
-          w-[170px]
+const ExplorerTag = ({btnName,btnFunction}) => {
+  return (
+    <button onClick={btnFunction} className="w-[170px]
           h-[48px]
           bg-orange-500
           text-white
@@ -22,13 +16,10 @@ const  nButton extends Component {
           hover:bg-orange-600
           active:scale-95
           transition
-          duration-300
-        "
-      >
-        {text}
-      </button>
-    );
-  }
-}
+          duration-300">
+      {btnName}
+    </button>
+  );
+};
 
-export default Button;
+export default ExplorerTag;
