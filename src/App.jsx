@@ -1,11 +1,12 @@
 import React from 'react'
-import Button from './components/common/Button'
+import AuthProvider from './context/AuthContext'
+import AppRoutes from './routes/AppRoutes'
+
 function App() {
   return (
-    <div>
-      <Button btnName="Explore Courses"/>
-
-    </div>
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
   )
 }
 

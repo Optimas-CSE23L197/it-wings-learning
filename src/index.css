@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+:root {
+  --blue-Dark: #0c2b4e;
+  --blue-Medium: #1a3d64;
+  --blueTeal: #1d546c;
+  --blueLight: #f4f4f4;
+
+  /* ===== Purple Theme ===== */
+  --purpleDark: #540863;
+  --purpleMedium: #92487a;
+  --purpleLight: #e49ba6;
+  --purpleSoft: #ffd3d5;
+
+  /* ===== Neutral Colors ===== */
+  --whiteCustom: #ffffff;
+  --grayLight: #f8f9fa;
+  --grayDark: #222222;
+
+  /* ===== Accent Colors ===== */
+  --accent: #ffb703;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.blueDark {
+  background-color: #0c2b4e;
+}
+
+.blueMedium {
+  background-color: #1a3d64;
+}
