@@ -8,6 +8,8 @@ import RoleBasedRoute from "./RoleBasedRoute";
 // pages
 import Home from "../pages/landing/Home";
 
+import AllArticles from "../pages/contact/AllArticles";
+
 export default function AppRoutes() {
     return (
         <Routes>
@@ -16,6 +18,10 @@ export default function AppRoutes() {
 
             {/* non-protected example */}
             <Route path="/" element={<Home />} />
+           
+            
+            <Route path="/all-articles" element={<AllArticles />} />
+    
 
             {/* protected routes */}
             <Route
