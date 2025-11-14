@@ -14,6 +14,9 @@ import Login from "../pages/login/Login";
 import Register from "../pages/signup/Signup";
 
 import AllArticles from "../pages/contact/AllArticles";
+import StudentDashboard from "../modules/students/StudentDashboard";
+import SuperAdminDashboard from "../modules/super-admin/dashboard/SuperAdminDashboard";
+import AdminDashboard from "../modules/admin/dashboard/AdminDashboard";
 
 export default function AppRoutes() {
     return (
@@ -31,6 +34,9 @@ export default function AppRoutes() {
 
 
             <Route path="/all-articles" element={<AllArticles />} />
+            <Route path="/student-dashboard" element={<StudentDashboard />} />
+            <Route path="/super-admin-dashboard" element={<SuperAdminDashboard />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
 
             {/* protected routes */}
