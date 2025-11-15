@@ -1,96 +1,81 @@
-import React from "react";
-import InstructorSidebar from "../../../components/instructor/InstructorSidebar";
-import StatCard from "../../../components/instructor/StatCard";
+// ===============================
+// InstructorDashboard.jsx (ACTIVE TAB VERSION)
+// ===============================
 
-import { FiBookOpen, FiUsers, FiDollarSign, FiStar } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiMenu } from "react-icons/fi";
+
+// GLOBAL COMPONENTS
+import DashboardTopBar from "../../shared/DashboardTopBar/DashboardTopBar";
+
+// INSTRUCTOR COMPONENTS
+import InstructorSidebar from "../../../components/instructor/InstructorSidebar";
+
+// PAGE COMPONENTS (You will build these)
+// import InstructorOverview from "../InstructorOverview/InstructorOverview";
+import InstructorStudents from "../InstructorStudents/InstructorStudents";
+import Review from "../reviews/reviews";
+import SettingsSection from "../../shared/setting/SettingsSection";
+import GlobalProfile from "../../shared/profile/GlobalProfile";
+
+const instructorUser = {
+  name: "Rahul Kumar",
+  email: "rahul@academy.com",
+  role: "instructor",
+  image: "/assets/images/profile.jpg",
+};
 
 const InstructorDashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("overview");
+
   return (
-    <div className="flex bg-gray-100 min-h-screen">
+    <div className="min-h-screen bg-[var(--blueLight)] flex">
 
-      {/* Sidebar */}
-      <InstructorSidebar />
+      {/* SIDEBAR */}
+      <InstructorSidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
 
-      {/* Main Content */}
-      <main className="flex-1 p-10">
+      {/* MOBILE MENU BUTTON */}
+      <button
+        className="lg:hidden absolute top-5 left-5 p-2 bg-white shadow rounded-lg z-50"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        <FiMenu size={22} />
+      </button>
 
-        <h1 className="text-4xl font-bold mb-10 text-gray-800">
-          Instructor Dashboard
-        </h1>
+      {/* MAIN CONTENT */}
+      <main className="flex-1 h-screen overflow-y-auto">
 
-        {/* Stats Overview */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* TOP BAR */}
+        <DashboardTopBar
+          user={instructorUser}
+          onMobileMenu={() => setSidebarOpen(!sidebarOpen)}
+        />
 
-          <StatCard
-            icon={<FiBookOpen />}
-            title="Total Courses"
-            value="18"
-            trend="+3 this month"
-          />
+        {/* CONTENT AREA */}
+        <div className="p-6 lg:p-10 pt-28">
 
-          <StatCard
-            icon={<FiUsers />}
-            title="Total Students"
-            value="2,540"
-            trend="+120 this month"
-          />
+          {/* ==== PAGE RENDERING BASED ON ACTIVE TAB ==== */}
 
-          <StatCard
-            icon={<FiDollarSign />}
-            title="Total Earnings"
-            value="$12,730"
-            trend="+$1,120 this month"
-          />
+          {/* {activeTab === "overview" && <InstructorOverview user={instructorUser} />} */}
 
-          <StatCard
-            icon={<FiStar />}
-            title="Average Rating"
-            value="4.8"
-            trend="+0.2 increase"
-          />
+          {activeTab === "students" && <InstructorStudents />}
 
-        </div>
+          {activeTab === "reviews" && <Review />}
 
-        {/* Recent Courses Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-6">Recent Courses</h2>
+          {activeTab === "profile" && <GlobalProfile user={instructorUser} />}
 
-          <div className="space-y-4">
+          {activeTab === "settings" && <SettingsSection user={instructorUser} />}
 
-            <div className="bg-white shadow-md p-4 rounded-xl flex justify-between items-center">
-              <div>
-                <p className="font-semibold text-lg">React for Beginners</p>
-                <p className="text-gray-500 text-sm">120 students • 4.7 rating</p>
-              </div>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                View
-              </button>
-            </div>
-
-            <div className="bg-white shadow-md p-4 rounded-xl flex justify-between items-center">
-              <div>
-                <p className="font-semibold text-lg">Mastering JavaScript</p>
-                <p className="text-gray-500 text-sm">450 students • 4.8 rating</p>
-              </div>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                View
-              </button>
-            </div>
-
-            <div className="bg-white shadow-md p-4 rounded-xl flex justify-between items-center">
-              <div>
-                <p className="font-semibold text-lg">Web Design Basics</p>
-                <p className="text-gray-500 text-sm">310 students • 4.6 rating</p>
-              </div>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                View
-              </button>
-            </div>
-
-          </div>
         </div>
 
       </main>
+
     </div>
   );
 };

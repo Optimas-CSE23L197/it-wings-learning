@@ -63,6 +63,14 @@ export default function AppRoutes() {
                     </ProtectedRoutes>
                 }
             />
+            <Route
+                path="/instructor"
+                element={
+                    <ProtectedRoutes>
+                        <RoleBasedRoute allow={["instructor"]} />
+                    </ProtectedRoutes>
+                }
+            />
         </Routes>
     );
 }
