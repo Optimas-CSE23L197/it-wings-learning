@@ -35,3 +35,47 @@
 .blueMedium {
   background-color: #1a3d64;
 }
+
+.sidebar-btn {
+  @apply flex items-center gap-3 w-full p-3 rounded-lg transition hover:bg-gray-100;
+}
+
+.active-tab {
+  background: var(--accent);
+  color: white;
+}
+
+.drop-item {
+  @apply w-full text-left text-sm px-3 py-2 rounded-lg 
+           hover:bg-gray-100 transition;
+}
+
+.section-title {
+  @apply text-xl font-semibold;
+  color: var(--blueDark);
+}
+
+.settings-field {
+  @apply flex items-start gap-3 p-3 bg-[var(--blueLight)] rounded-lg;
+}
+
+.label {
+  @apply text-xs uppercase text-gray-500;
+}
+
+.input-box {
+  @apply w-full p-2 mt-1 rounded-lg border border-gray-300 
+           focus:ring-2 focus:ring-[var(--accent)] outline-none transition;
+}
+
+.profile-field {
+  @apply flex items-start gap-3 p-3 bg-[var(--blueLight)] rounded-lg;
+}
+
+.profile-field .label {
+  @apply text-xs uppercase text-gray-500;
+}
+
+.profile-field .value {
+  @apply text-gray-800 font-semibold;
+}
