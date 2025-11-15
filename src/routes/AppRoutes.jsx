@@ -35,7 +35,6 @@ export default function AppRoutes() {
 
             <Route path="/all-articles" element={<AllArticles />} />
             <Route path="/super-admin-dashboard" element={<SuperAdminDashboard />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
 
             {/* protected routes */}
@@ -45,7 +44,16 @@ export default function AppRoutes() {
                     <ProtectedRoutes>
                         <RoleBasedRoute allow={["student"]}>
                             <StudentDashboard />
-                            {/* <StudentDashboard /> */}
+                        </RoleBasedRoute>
+                    </ProtectedRoutes>
+                }
+            />
+            <Route
+                path="/admin"
+                element={
+                    <ProtectedRoutes>
+                        <RoleBasedRoute allow={["admin"]}>
+                            <AdminDashboard />
                         </RoleBasedRoute>
                     </ProtectedRoutes>
                 }

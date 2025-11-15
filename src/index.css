@@ -79,3 +79,15 @@
 .profile-field .value {
   @apply text-gray-800 font-semibold;
 }
+
+.admin-nav-btn {
+  @apply flex items-center gap-3 w-full p-3 rounded-lg 
+    transition-all duration-200 
+    hover:bg-gray-100;
+}
+
+.admin-nav-btn.active {
+  background: var(--accent);
+  color: white;
+  @apply shadow;
+}
